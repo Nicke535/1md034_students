@@ -8,12 +8,12 @@
         <main>
             <h1>Welcome to Windy's</h1>
 
-            <section>
+            <section id="burger-selection">
                 <h3>Select burgers</h3>
                 <p>This is where you select your burgers! Tasty!</p>
                 <table>
                     <tbody>
-                        <tr align="center" style="vertical-align: top">
+                        <tr align="center" style="vertical-align: top;">
                             <th>
                                 <h4>The excessively unhealthy burger</h4>
                                 <p><img src="./img/excessoburger.jpg" alt="Picture of the excessively unhealthy burger" title="Picture of the excessively unhealthy burger" height="250"></p>
@@ -45,9 +45,28 @@
                 </table>
             </section>
     
-            <section>
+            <section id="contact">
                 <h3>Customer Information</h3>
-                <p>Here is where all the user info should go, such as billing address.</p>
+                <p>This is where you provide information necessary for delivery.</p>
+                <h4>Delivery information:</h4>
+                <form>
+                    <p>
+                        <label for="name">Full name</label><br>
+                        <input type="text" id="name" name="nm" required="required" placeholder="Full name" />
+                    </p>
+                    <p>
+                        <label for="email">E-mail</label><br>
+                        <input type="email" id="email" name="em" required="required" placeholder="E-mail address" />
+                    </p>
+                    <p>
+                        <label for="street">Street</label><br>
+                        <input type="text" id="street" name="st" required="required" placeholder="Street name" />
+                    </p>
+                    <p>
+                        <label for="house">House</label><br>
+                        <input type="number" id="house" name="ho" required="required" placeholder="House number" />
+                    </p>
+                </form>
             </section>
         </main>
         <hr>
