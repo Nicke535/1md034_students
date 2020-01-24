@@ -66,6 +66,21 @@
                         <label for="house">House</label><br>
                         <input type="number" id="house" name="ho" required="required" placeholder="House number" />
                     </p>
+                    <p>
+                        <label for="payment_options">Payment Option</label><br />
+                        <select id="payment_options" name="payopt">
+                            <option selected=true>Dogecoin</option>
+                            <option>Vista</option>
+                            <option>GrassHOPPA</option>
+                            <option>Cartons of milk</option>
+                        </select>
+                    </p>                        
+                    <label for="gender_options">Gender : </label><br />
+                    <p id="gender_options">
+                        <input type="radio" name="gender_selection" value="other" checked=true> Other/Do not want to inform<br>
+                        <input type="radio" name="gender_selection" value="female"> Female<br>
+                        <input type="radio" name="gender_selection" value="male"> Male
+                    </p>
                 </form>
             </section>
         </main>
