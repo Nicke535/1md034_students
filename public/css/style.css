@@ -6,3 +6,11 @@ body {
 	font-family: 'Abel', sans-serif;
 	font-size: 14pt;
 }
+
+.allergy {
+    color: #ff5500;
+}
+
+.allergyHighlight {
+	text-transform: uppercase;
+}
