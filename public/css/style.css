@@ -1,4 +1,8 @@
+@import 'https://fonts.googleapis.com/css?family=Abel|Dosis|Montserr';
+
 body {
 	margin: 0;
 	padding: 0;
+	font-family: 'Abel', sans-serif;
+	font-size: 14pt;
 }
