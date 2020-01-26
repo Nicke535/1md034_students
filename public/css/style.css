@@ -36,6 +36,12 @@ th {
 	padding-right: 15px;
 }
 
+#main-title {
+	position: absolute;
+	margin-top: -150px;
+	margin-left: 20px;
+}
+
 #main-border-image {
 	width: 100%;
 	height: auto;
