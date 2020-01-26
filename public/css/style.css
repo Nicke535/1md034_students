@@ -11,6 +11,27 @@ body {
     color: #ff5500;
 }
 
+.allergeneList {
+	text-align: "left";
+}
+
 .allergyHighlight {
 	text-transform: uppercase;
+}
+
+#burger-selection {
+	/*
+	background-color: black;
+	color: white;
+	*/
+}
+
+#contact {
+	background-color: black;
+	color: white;
+}
+
+button:hover{
+	background-color: green; /* Note: seems to not be supported for Microsoft Edge */
+	cursor: pointer;
 }
