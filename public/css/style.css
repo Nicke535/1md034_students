@@ -31,18 +31,32 @@ th {
 }
 
 
-#main-title {
+.main-header {
 	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#main-border-image {
+	width: 100%;
+	height: auto;
+	opacity: 30%;
+	border-radius: 20px;
 }
 
 #burger-selection {
-	padding: 15px;
+	margin: 10px;
+	padding: 10px;
+	border: 2px black dashed;
+	border-radius: 19px;
 }
 
 #contact {
-	padding: 30px;
+	margin: 40px;
+	padding: 10px;
 	background-color: black;
 	color: white;
+	border: 2px white dashed;
+	border-radius: 19px;
 }
 
 
