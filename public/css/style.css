@@ -7,15 +7,28 @@ body {
 	font-size: 14pt;
 }
 
-table {
-	width: 80%;
+.burger-grid {
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 33.333333% 33.333333% 33.333333%;
 }
 
-th {
+.burger-grid-piece {
 	padding-left: 10px;
 	padding-right: 10px;
+}
+
+.burger-grid-piece-a {
+	grid-column: 1;
+}
+.burger-grid-piece-b {
+	grid-column: 2 ;
+}
+.burger-grid-piece-c {
+	grid-column: 3 ;
 }
 
 .allergy {
