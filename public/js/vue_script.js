@@ -1,6 +1,10 @@
 const vm = new Vue({
-    el: '#myID',
+    el: '#burger-selection',
     data: {
-      arbitraryVariableName: 'Välj en burgare'
+      bBurg : burgerBig,
+      sqBurg : burgerSquare,
+      sqaBurg : burgerSquareAlternate,
+      tBurg : burgerTiny,
+      taBurg : burgerTinyAlternate
     }
   })
