@@ -1,9 +1,3 @@
-//Vue instantiation
-const vm = new Vue({
-
-})
-
-
 //Class for a burger menu item
 class MenuItem {
     //Constructor
