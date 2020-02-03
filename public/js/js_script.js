@@ -33,6 +33,8 @@ let menu = [
     new MenuItem("Teeny Tiny Borgar (Gluten Free)", "./img/tiny_borgar.jpg", 62, [])
 ];
 
+
+/*
 //Adds our burgers to our burger-selection element
 let burgerCounter = 0;
 for (let burger of menu) {
@@ -74,6 +76,8 @@ for (let burger of menu) {
     
     burgerCounter++;
 }
+*/
+
 
 /**
  * Creates and appends a new HTML element to an existing one.
@@ -81,8 +85,10 @@ for (let burger of menu) {
  * @param {string} elemType Tag of the element type that should be created
  * @returns {HTMLElement} The newly-created element
  */
-function createAndAppendElem(toAppendTo, elemType) {
+/*
+ function createAndAppendElem(toAppendTo, elemType) {
     let newElem = document.createElement(elemType);
     toAppendTo.append(newElem);
     return newElem;
 }
+*/

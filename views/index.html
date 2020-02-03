@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="./css/style.css">
         <script src="https://vuejs.org/js/vue.js"></script>
         <script src="js/js_script.js" defer></script>
-        <script src="js/vue_script.js"></script>
+        <script src="js/vue_script.js" defer></script>
     </head>
     <body>
         <main>
@@ -19,7 +19,16 @@
                 <h3>Select burgers</h3>
                 <p>This is where you select your burgers! Tasty!</p>
                 <div class="burger-grid" id="burger-selection-grid">
-                    <!--This is filled script-side-->
+                    <div v-for="(burger, key) in menu" class="burger-grid-piece" v-bind:style="'grid-column: ' + ((key % 3)+1) + '; grid-row: ' + (((key - (key % 3)) / 3)+1) + ';'">
+                        <h4>{{burger.getName()}}</h4>
+                        <img v-bind:src="burger.image" v-bind:alt="'Image of the' + burger.getName()" class="burger-image">
+                        <ul>
+                            <li>Kcal : {{burger.getCalories()}}</li>
+                            <li v-for="allergy in burger.allergyList" v-if="burger.allergyList.length > 0" class="allergy">
+                                Contains <span class="allergyHighlight">{{allergy}}</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
     

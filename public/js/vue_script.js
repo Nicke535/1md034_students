@@ -1,8 +1,7 @@
-/*
+
 const vm = new Vue({
-    el: '#burger-selection',
+    el: '#burger-selection-grid',
     data: {
         menu : menu
     }
 })
-*/
