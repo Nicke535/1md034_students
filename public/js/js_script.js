@@ -34,13 +34,13 @@ let menu = [
 ];
 
 //Adds our five burgers to our burger-selection element
-for (let burger in menu) {
+for (let burger of menu) {
     let newPara = document.createElement("p");
     newPara.append(burger.getNameAndCalories());
 
     if (burger.allergyList.length > 0) {
         let allergenUnorderedList = document.createElement("ul");
-        for (let allergen in burger.allergyList) {
+        for (let allergen of burger.allergyList) {
             let newIndex = document.createElement("li");
             newIndex.append("Contains " + allergen);
             allergenUnorderedList.append(newIndex);
