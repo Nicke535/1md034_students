@@ -5,7 +5,7 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="./css/style.css">
         <script src="https://vuejs.org/js/vue.js"></script>
-        <script src="js/js_script.js"></script>
+        <script src="js/js_script.js" defer></script>
         <script src="js/vue_script.js"></script>
     </head>
     <body>
@@ -15,46 +15,11 @@
                 <h1 id="main-title">Welcome to Windy's</h1>
             </header>
 
-
             <section id="burger-selection">
                 <h3>Select burgers</h3>
                 <p>This is where you select your burgers! Tasty!</p>
-                <div class="burger-grid">
-                    <div class="burger-grid-piece burger-grid-piece-a">
-                        <h4>The excessively unhealthy burger</h4>
-                        <p><img src="./img/excessoburger.jpg" alt="Picture of the excessively unhealthy burger" title="Picture of the excessively unhealthy burger" height="250"></p>
-                        <!--Info regarding allergenes and the like-->
-                        <section id="allergenes-tiny-borgar">
-                            <ul style="text-align: left">
-                                <li>Kcal : 50 000</li>
-                                <li class="allergy">If you have allergies of any kind, don't test your luck; this thing <span class="allergyHighlight">most likely has it</span></li>
-                            </ul>
-                        </section>
-                    </div>
-                    <div class="burger-grid-piece burger-grid-piece-b">
-                        <h4>The squarely burger</h4>
-                        <p><img src="./img/sqr_borgar.jpg" alt="Picture of the squarely burger" title="Picture of the squarely burger" height="250"></p>
-                        <!--Info regarding allergenes and the like-->
-                        <section id="allergenes-tiny-borgar">
-                            <ul style="text-align: left">
-                                <li>Kcal : 400</li>
-                                <li class="allergy">Contains <span class="allergyHighlight">cow beef</span></li>
-                                <li class="allergy">Contains <span class="allergyHighlight">squares</span></li>
-                            </ul>
-                        </section>
-                    </div>
-                    <div class="burger-grid-piece burger-grid-piece-c">
-                        <h4>The teeeny tiny borgar</h4>
-                        <p><img src="./img/tiny_borgar.jpg" alt="Picture of the teeny tiny borgar" title="Picture of the teeny tiny borgar" height="250"></p>
-                        <!--Info regarding allergenes and the like-->
-                        <section id="allergenes-tiny-borgar">
-                            <ul style="text-align: left">
-                                <li>Kcal : 5</li>
-                                <li class="allergy">Contains <span class="allergyHighlight">gluten</span></li>
-                                <li class="allergy">Contains <span class="allergyHighlight">cow beef</span></li>
-                            </ul>
-                        </section>
-                    </div>
+                <div class="burger-grid" id="burger-selection-grid">
+                    <!--This is filled script-side-->
                 </div>
             </section>
     

@@ -16,11 +16,17 @@ body {
 	grid-template-columns: 33.333333% 33.333333% 33.333333%;
 }
 
+.burger-image {
+	max-width: 90%;
+	max-height: 250px;
+}
+
 .burger-grid-piece {
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
+/* Unused */
 .burger-grid-piece-a {
 	grid-column: 1;
 }
@@ -30,12 +36,13 @@ body {
 .burger-grid-piece-c {
 	grid-column: 3 ;
 }
+/* End of unused */
 
 .allergy {
     color: #ff5500;
 }
 
-.allergeneList {
+.allergenList {
 	text-align: "left";
 }
 
@@ -51,7 +58,7 @@ body {
 
 #main-title {
 	position: absolute;
-	margin-top: -150px;
+	margin-top: -12%;
 	margin-left: 20px;
 	color: white;
 }
