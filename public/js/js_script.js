@@ -1,38 +1,4 @@
-//Class for a burger menu item
-class MenuItem {
-    //Constructor
-    constructor(itemName, image, calories, allergyList) {
-        this.itemName = itemName;
-        this.image = image;
-        this.calories = calories;
-        this.allergyList = allergyList;
-    }
-
-    // Gets the name of the menu item
-    getName() {
-        return this.itemName;
-    }
-
-    // Gets the calories of the menu item
-    getCalories() {
-        return this.calories;
-    }
-
-    getNameAndCalories() {
-       return this.itemName + " : " + this.calories + " kcal";
-    }
-}
-
 // --- Main block for code running --- //
-//Creates our five burgers
-let menu = [
-    new MenuItem("Excessively Unhealthy Burger", "./img/excessoburger.jpg", 50000, ["Gluten", "Beef", "Everything else"]),
-    new MenuItem("Squarely Burger", "./img/sqr_borgar.jpg", 2000, ["Beef", "Squares"]),
-    new MenuItem("Squarely Burger (Veggie)", "./img/sqr_borgar.jpg", 1400, ["Squares", "Soy"]),
-    new MenuItem("Teeny Tiny Borgar", "./img/tiny_borgar.jpg", 50, ["Gluten"]),
-    new MenuItem("Teeny Tiny Borgar (Gluten Free)", "./img/tiny_borgar.jpg", 62, [])
-];
-
 
 /*
 //Adds our burgers to our burger-selection element
@@ -47,22 +13,22 @@ for (let burger of menu) {
 
     //Adds the name of the burger
     let burgHeader = createAndAppendElem(newDiv, "h4");
-    burgHeader.append(burger.getName());
+    burgHeader.append(burger.itemName);
 
     //Adds the burger image
     let burgImage = createAndAppendElem(newDiv, "img");
     burgImage.src = burger.image;
     burgImage.className = "burger-image";
-    burgImage.alt = "Image of the " + burger.getName();
+    burgImage.alt = "Image of the " + burger.itemName;
 
     //Adds the extra info list, starting with only Kcal
     let section = createAndAppendElem(newDiv, "section");
-    section.id = "extra-info-" + burger.getName();
+    section.id = "extra-info-" + burger.itemName;
     let infoUList = createAndAppendElem(section, "ul");
     infoUList.style = "text-align: left";
 
     let kcalItem = createAndAppendElem(infoUList, "li");
-    kcalItem.append("Kcal : " + burger.getCalories());
+    kcalItem.append("Kcal : " + burger.calories);
 
     //Add all allergens to the list, with proper class-based highlights
     for (let allergen of burger.allergyList) {
