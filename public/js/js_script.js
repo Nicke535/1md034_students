@@ -1,6 +1,47 @@
 // --- Main block for code running --- //
 
 /*
+let btn = document.getElementById("submit_button");
+btn.onclick = clickFunc;
+
+let formData = {};
+
+function clickFunc () {
+    updateFormData();
+    console.log(formData);
+}
+*/
+
+
+/**
+ * Updates the form data so that it's up-to-date with the newest values
+ */
+function updateFormData() {
+    formData.name = document.getElementById("name").value;
+    formData.street = document.getElementById("street").value;
+    formData.email = document.getElementById("email").value;
+    formData.house = document.getElementById("house").value;
+    formData.payment_option = document.getElementById("payment_options").value;
+    formData.gender = getRadioButtonValue(document.getElementsByName("gender_selection"));
+}
+
+/**
+ * Utility function for getting the selected value from a series of radio buttons (which are assumed to be linked)
+ * @param {HTMLElement[]} listOfRadioButtons 
+ * @returns null if no button was selected, or the value of the selected button otherwise
+ */
+function getRadioButtonValue(listOfRadioButtons) {
+    for (button of listOfRadioButtons) {
+        if (button.checked) {
+            return button.value;
+        }
+    }
+
+    return null;
+}
+
+
+/*
 //Adds our burgers to our burger-selection element
 let burgerCounter = 0;
 for (let burger of menu) {
@@ -51,10 +92,8 @@ for (let burger of menu) {
  * @param {string} elemType Tag of the element type that should be created
  * @returns {HTMLElement} The newly-created element
  */
-/*
  function createAndAppendElem(toAppendTo, elemType) {
     let newElem = document.createElement(elemType);
     toAppendTo.append(newElem);
     return newElem;
 }
-*/
