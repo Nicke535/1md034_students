@@ -18,9 +18,7 @@ function clickFunc () {
  */
 function updateFormData() {
     formData.name = document.getElementById("name").value;
-    formData.street = document.getElementById("street").value;
     formData.email = document.getElementById("email").value;
-    formData.house = document.getElementById("house").value;
     formData.payment_option = document.getElementById("payment_options").value;
     formData.gender = getRadioButtonValue(document.getElementsByName("gender_selection"));
 }

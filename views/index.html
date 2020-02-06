@@ -4,6 +4,8 @@
         <title>Welcome to Windy's!</title>
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="stylesheet" href="css/deli-very.css">
+        <script src="/socket.io/socket.io.js"></script>
         <script src="https://vuejs.org/js/vue.js"></script>
         <script type="text/javascript" src="js/menu.js"></script>
         <script src="js/js_script.js" defer></script>
@@ -48,14 +50,18 @@
                             <label for="email">E-mail</label><br>
                             <input v-model="formData.email" type="email" id="email" name="em" required="required" placeholder="E-mail address" />
                         </p>
-                        <p>
-                            <label for="street">Street</label><br>
-                            <input v-model="formData.street" type="text" id="street" name="st" required="required" placeholder="Street name" />
-                        </p>
-                        <p>
-                            <label for="house">House</label><br>
-                            <input v-model="formData.house" type="number" id="house" name="ho" required="required" placeholder="House number" />
-                        </p>
+                        <!--New addition: map for selecting location-->
+                        <label for="order-place-selection"> Click in the map to select order location </label>
+                        <div id="order-place-selection" class="view-box">
+                            <div id="dots" v-on:click="addOrder">
+                                <div 
+                                v-for="(order, key) in orders"
+                                v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+                                {{key}}
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
                         <p>
                             <label for="payment_options">Payment Option</label><br />
                             <select v-model="formData.payment_option" id="payment_options" name="payopt">

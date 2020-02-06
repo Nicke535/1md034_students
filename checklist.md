@@ -64,20 +64,20 @@ Add the following style/behaviour to your website (mostly in style.css but also 
 - [X] Create a menu.js file with an array containing your five burgers in JSON format
 - [X] Remove the menuItem constructor and the instantiation of your five burgers from js_script.js
 - [X] Update vue_script.js to get the burgers from menu.js instead
-- [ ] Create an event listener in js_script.js connected to your order button
-- [ ] Add a function to js_script.js connected to the order button in index.html that collects the user's input from the text boxes, the gender and all items on the order (that have the checkbox checked) into an array and also prints out the contents to your console 
-- [ ] Comment out your previous event listener and use Vue's corresponding functionality in vue_script.js and index.html to react on button presses
-- [ ] Use Vue's model binding to collect the user's input
-- [ ] Use Vue to print out a summary of the user's input to the bottom of your page when the order button is pressed
-- [ ] Add a checkbox to every burger on your menu when it is generated
-- [ ] Include what burgers the user has checked in the order summary
+- [X] Create an event listener in js_script.js connected to your order button
+- [X] Add a function to js_script.js connected to the order button in index.html that collects the user's input from the text boxes, the gender and all items on the order (that have the checkbox checked) into an array and also prints out the contents to your console 
+- [X] Comment out your previous event listener and use Vue's corresponding functionality in vue_script.js and index.html to react on button presses
+- [X] Use Vue's model binding to collect the user's input
+- [X] Use Vue to print out a summary of the user's input to the bottom of your page when the order button is pressed
+- [X] Add a checkbox to every burger on your menu when it is generated
+- [X] Include what burgers the user has checked in the order summary
 
 
 ## 05 Messaging
 
-- [ ] Exchange the fields for the customer's address with the interactive map
-- [ ] Copy the parts of deli-very.js that you need to make the map work into vue_script.js
-- [ ] Check that your map works and adjust the coordinates if the dots don't show up in the right place.
+- [X] Exchange the fields for the customer's address with the interactive map
+- [X] Copy the parts of deli-very.js that you need to make the map work into vue_script.js
+- [X] Check that your map works and adjust the coordinates if the dots don't show up in the right place.
 - [ ] Separate addOrder into one function that controls what should happen when a user clicks in the map (displayOrder) and rewrite addOrder to control what should happen when the user clicks the order button
 - [ ] Remove the socket.on bindings to "currentQueue" and "initialize", and temporarily fix getNext to assign locally generated orderId's when an order is sent
 - [ ] Send the actual burgers with the order instead of Beans and Curry
