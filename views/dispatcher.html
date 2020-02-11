@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>DELI-VERY DISPATCHER</title>
   <link rel="stylesheet" href="css/deli-very.css">
   <script src="/vue/vue.js" defer></script>
@@ -13,7 +13,8 @@
   <div id="orders">
     <div id="orderList">
       <div v-for="(order, key) in orders">
-        #{{ key }}: {{ order.orderItems.join(", ") }}
+        #{{ key }}: {{ order.orderItems.join(", ") }}<br/>
+        <i>{{order.personalInfo.name}}  ({{order.personalInfo.email}}, {{order.personalInfo.gender}}, {{order.personalInfo.payment_option}})</i>
       </div>
     </div>
     <div id="dots">

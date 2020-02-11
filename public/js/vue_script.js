@@ -73,7 +73,8 @@ const vm = new Vue({
           socket.emit('addOrder', {
             orderId: this.getNext(),
             details: vm.order.details,
-            orderItems: listOfBurgers
+            orderItems: listOfBurgers,
+            personalInfo: vm.formData
           });
         },
         displayOrder: function(event) {
