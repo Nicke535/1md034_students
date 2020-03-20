@@ -76,13 +76,16 @@
                             <input v-model="formData.gender" type="radio" name="gender_selection" value="male">Male
                         </p>
                     </form>
-                    <!--This is only temporary: once the form is functional, we will put this together with the form-->
                     <button v-on:click="submitFunc" type="submit" style="height: 40pt;" id="submit_button">
                         <img src="./img/submit_form.png" alt="Picture for submit button" height="20pt"><div style="text-align: center;">Submit</div>
                     </button>
                 </section>
                 <div id="submit-display">
-
+                    <!--Shows the user the data that they have submitted... though only IF they have submitted-->
+                    <div v-if="submitted === true">
+                        {{ order.items.join(", ") }}<br/>
+                        <i>{{formData.name}}  ({{formData.email}}, {{formData.gender}}, {{formData.payment_option}})</i>
+                    </div>
                 </div>
             </div>
         </main>

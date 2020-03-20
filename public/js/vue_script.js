@@ -36,7 +36,8 @@ const vm = new Vue({
             },
             items: []
         },
-        lastOrderID: 0
+        lastOrderID: 0,
+        submitted: false
     },
     methods: {
         submitFunc: () => {
@@ -47,10 +48,10 @@ const vm = new Vue({
                 //Gets the checkbox itself
                 let checkbox = document.getElementById("burger-selection-checkbox-" + burger.itemName);
                 //If it had a checkbox, and it was checked, add the text
-                if (checkbox && checkbox.checked == true) {
+                if (checkbox !== undefined && checkbox.checked == true) {
                     orderedBurgers[i] = burger.itemName;
                     i++;
-                } else if (!checkbox) {
+                } else if (checkbox === undefined) {
                     console.log("Missing checkbox for " + burger.itemName + "!");
                 }
             }
@@ -70,12 +71,14 @@ const vm = new Vue({
            * The click event object contains among other things different
            * coordinates that we need when calculating where in the map the click
            * actually happened. */
+          this.order.items = listOfBurgers;
           socket.emit('addOrder', {
             orderId: this.getNext(),
             details: vm.order.details,
             orderItems: listOfBurgers,
             personalInfo: vm.formData
           });
+          this.submitted = true;
         },
         displayOrder: function(event) {
             let offset = {
